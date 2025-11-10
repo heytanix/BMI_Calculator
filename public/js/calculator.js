@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // BMI display
             resultDiv.textContent = `Your BMI: ${data.bmi}`;
             resultDiv.style.color = '#1871bc';
-            categoryDiv.textContent = `${data.category} \u2014 ${data.description}`;
+            categoryDiv.textContent = `${data.category} — ${data.description}`;
             categoryDiv.style.color = '#46525c';
             pointer.style.left = mapBMIToPercent(data.bmi) + '%';
         })
