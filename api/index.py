@@ -2,12 +2,10 @@ from flask import Flask, render_template, request, jsonify, send_from_directory
 import os
 
 app = Flask(__name__, 
-            template_folder=os.path.join(os.path.dirname(__file__), '..', 'templates'),
-            static_folder=os.path.join(os.path.dirname(__file__), '..', 'static'))
+            template_folder=os.path.join(os.path.dirname(__file__), '..', 'templates'))
 
 @app.route('/static/<path:path>')
 def send_static(path):
-    """Explicitly serve static files for Vercel deployments"""
     static_folder = os.path.join(os.path.dirname(__file__), '..', 'static')
     return send_from_directory(static_folder, path)
 
