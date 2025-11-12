@@ -50,12 +50,12 @@ You can try the app instantly here: [bmi-calculator-phi-seven-98.vercel.app](htt
 ```
 BMI_Calculator/
 │
-├── api/
-│    └── index.py     # Flask backend API
-├── static/           # Static assets served to client
-├── templates/        # Jinja/HTML templates
-├── vercel.json       # Modern Vercel routing config
-└── README.md         # Project information
+├── api/             # Flask backend (index.py)
+├── public/          # Frontend static assets (HTML, CSS, JS)
+├── templates/       # Jinja2/HTML templates for Flask
+├── requirements.txt # Python dependencies
+├── vercel.json      # Vercel deployment/rewrites configuration
+└── README.md        # Project documentation
 ```
 
 ---
