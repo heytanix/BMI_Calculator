@@ -1,50 +1,69 @@
 # BMI Calculator
 
-A responsive BMI calculator web application built with Python (Flask backend), HTML, CSS, and JavaScript. It allows users to input height and weight in any unit (Metric/Imperial), handles conversion logic, displays a dynamic BMI meter UI, and classifies BMI into standardized categories. Optimized for phones, tablets, laptops, and desktops. Ready for deployment on Vercel.
+A fully responsive web app to calculate Body Mass Index (BMI) using a modern Python Flask backend, with dynamic HTML, CSS, and JavaScript on the front end. Supports both metric and imperial units, provides categorized BMI results, and is built for seamless cross-device usage.
+
+---
+
+## 🚀 Live Deployment
+You can try the app instantly here: [bmi-calculator-phi-seven-98.vercel.app](https://bmi-calculator-phi-seven-98.vercel.app)
+
+---
 
 ## Features
-- Responsive UI for mobile, tablet, and desktop
-- Height/Weight input supports Metric (cm, kg) and Imperial (ft/in, lbs) units
-- Automatic unit conversion
-- Real-time BMI calculation and interactive meter
-- BMI categories:
-  - Underweight (<18.5)
-  - Healthy weight (18.5–24.9)
-  - Overweight (25–29.9)
-  - Obesity:
-    - Class 1 (30–34.9)
-    - Class 2 (35–39.9)
-    - Class 3 (≥40)
-- Visual feedback using meter widget
+- Multi-platform responsive UI (mobile, tablet, desktop)
+- Enter height and weight in **metric (cm, kg)** or **imperial (ft/in, lbs)** units
+- Instant and accurate BMI calculation with clear category (underweight, normal, overweight, obesity)
+- Smart unit conversion and error handling
+- Interactive BMI meter gauge with color-coded feedback
+- Deployable out-of-the-box on Vercel with optimized settings (no legacy configs)
 
-## Installation
-1. Fork or clone this repository.
-2. Install dependencies:
+---
+
+## Quick Start
+1. **Clone the repo:**
+    ```bash
+    git clone https://github.com/heytanix/BMI_Calculator.git
+    cd BMI_Calculator
+    ```
+2. **Install dependencies:**
     ```bash
     pip install flask
     ```
-3. For local development:
+3. **Develop locally:**
     ```bash
-    python app.py
+    python api/index.py
+    # Or use flask run with FLASK_APP set
     ```
-4. For Vercel deployment, see [Vercel configuration](#vercel-deployment).
+4. **Deploy to Vercel:**
+    - Push to GitHub and link the repository in your [Vercel dashboard](https://vercel.com/).
 
-## Usage
-- Enter your height and weight in the preferred unit.
-- The app converts units automatically and shows BMI + category class.
+---
 
-## Vercel Deployment
-The repository includes necessary configuration for Vercel. Simply link this repo to your Vercel account.
+## Usage Guide
+- Enter your stats in either unit system.
+- The UI updates BMI and classifies you in real time.
+- The interactive gauge shows your result visually for clarity.
 
-### vercel.json
-The configuration is set to use Flask as backend and serve the front-end statically.
+---
 
-## File Structure
-- `app.py` - Flask backend
-- `static/` - Static files (HTML, CSS, JS)
-- `templates/` - HTML templates
-- `vercel.json` - Vercel configuration
-- `README.md`
+## Project Structure
+```
+BMI_Calculator/
+│
+├── api/
+│    └── index.py     # Flask backend API
+├── static/           # Static assets served to client
+├── templates/        # Jinja/HTML templates
+├── vercel.json       # Modern Vercel routing config
+└── README.md         # Project information
+```
+
+---
 
 ## License
-MIT License
+MIT License. This project is free and open for any use.
+
+---
+
+## Credits
+Created by Thanish C (@heytanix) as a quick deployable BMI tool for universal access.
