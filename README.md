@@ -60,6 +60,11 @@ BMI_Calculator/
 
 ---
 
+## Future Work
+- Integration of Gemini API to suggest personalized diet plans based on BMI results, supporting users to achieve and maintain a healthy BMI.
+
+---
+
 ## License
 MIT License. This project is free and open for any use.
 
