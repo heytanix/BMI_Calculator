@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BMI Gemini Diet Mockup</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: #f6f6f9;
+    }
+    .container {
+      display: flex;
+      flex-direction: row;
+      height: 100vh;
+    }
+    .inputs, .ai-suggestions {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
+    }
+    .inputs {
+      background: #fff;
+      box-shadow: 0 2px 8px #eee;
+      border-top-right-radius: 20px;
+      border-bottom-right-radius: 20px;
+    }
+    .ai-suggestions {
+      background: #eaf4fc;
+      box-shadow: 0 2px 8px #d6e9f7;
+      border-top-left-radius: 20px;
+      border-bottom-left-radius: 20px;
+    }
+    h2 {
+      margin-bottom: 20px;
+      font-size: 1.5em;
+    }
+    label {
+      font-weight: 500;
+      margin-bottom: 10px;
+    }
+    input {
+      margin-bottom: 24px;
+      padding: 10px 14px;
+      border: 1px solid #bbb;
+      border-radius: 4px;
+      width: 80%;
+      font-size: 1em;
+      background: #f9f9fa;
+    }
+    button {
+      padding: 10px 26px;
+      font-size: 1em;
+      background: #3a7ef5;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    .suggestion-output {
+      max-width: 90%;
+      margin-top: 30px;
+      color: #25506d;
+      background: #fff;
+      padding: 20px 16px;
+      border-radius: 12px;
+      box-shadow: 0 3px 12px #c4dff5;
+      font-size: 1.17em;
+      min-height: 60px;
+      text-align: left;
+      transition: background 0.2s;
+    }
+    @media (max-width: 600px) {
+      .container {
+        flex-direction: column;
+        height: unset;
+      }
+      .inputs, .ai-suggestions {
+        width: 100%;
+        border-radius: 0;
+        box-shadow: none;
+        padding: 24px 12px;
+      }
+      .inputs {
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        box-shadow: 0 1px 4px #eee;
+      }
+      .ai-suggestions {
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        box-shadow: 0 1px 4px #d6e9f7;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="inputs">
+      <h2>Enter Your Details</h2>
+      <label for="height">Height (cm):</label>
+      <input id="height" type="number" min="60" max="250" placeholder="Height in centimetres">
+      <label for="weight">Weight (kg):</label>
+      <input id="weight" type="number" min="20" max="250" placeholder="Weight in kilograms">
+      <button onclick="getGeminiSuggestions()">Get AI Diet Suggestion</button>
+    </div>
+    <div class="ai-suggestions">
+      <h2>AI Diet Suggestions</h2>
+      <div class="suggestion-output" id="aiOutput">BMI and Gemini-based suggestions will appear here.</div>
+    </div>
+  </div>
+  <script>
+    function getGeminiSuggestions() {
+      // Placeholder function where real Gemini API fetch would occur
+      const height = parseFloat(document.getElementById('height').value);
+      const weight = parseFloat(document.getElementById('weight').value);
+      if (!height || !weight) {
+        document.getElementById('aiOutput').innerText = 'Please enter both height and weight.';
+        return;
+      }
+      // Calculate BMI, normally would send height/weight to backend for Gemini API
+      const bmi = weight / ((height / 100) ** 2);
+      let bmiCategory = '';
+      if (bmi < 18.5) bmiCategory = 'Underweight';
+      else if (bmi < 25) bmiCategory = 'Healthy';
+      else if (bmi < 30) bmiCategory = 'Overweight';
+      else bmiCategory = 'Obese';
+
+      // Output mock Gemini AI suggestion
+      document.getElementById('aiOutput').innerHTML = `
+        <strong>BMI:</strong> ${bmi.toFixed(2)} <em>(${bmiCategory})</em><br><br>
+        <strong>Gemini Diet AI Suggestion:</strong><br>
+        "Eat more whole grains, lean proteins, and fresh vegetables. Reduce sugary or fried foods. Recommended daily calories: ${(bmiCategory === 'Healthy') ? 'Maintain current intake.' : (bmiCategory === 'Underweight' ? 'Increase by 300-500kcal.' : 'Reduce by 200-500kcal.')}">
+      `;
+    }
+  </script>
+</body>
+</html>
