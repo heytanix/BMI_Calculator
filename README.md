@@ -60,7 +60,7 @@ BMI_Calculator/
 
 ---
 
-## Future Work
+## Future Plans
 - Integration of Gemini API to suggest personalized diet plans based on BMI results, supporting users to achieve and maintain a healthy BMI.
 
 ---
