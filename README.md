@@ -19,7 +19,7 @@ You can try the app instantly here: [bmi-calculator-phi-seven-98.vercel.app](htt
 
 ---
 
-## Quick Start
+## Startup Guide
 1. **Clone the repo:**
     ```bash
     git clone https://github.com/heytanix/BMI_Calculator.git
