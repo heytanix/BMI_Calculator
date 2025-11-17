@@ -72,3 +72,4 @@ MIT License. This project is free and open for any use.
 
 ## Credits
 Created by Thanish C (@heytanix) as a quick deployable BMI tool for universal access.
+
