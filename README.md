@@ -4,7 +4,7 @@ A fully responsive web app to calculate Body Mass Index (BMI) using a modern Pyt
 
 ---
 
-## 🚀 Live Deployment
+## 🚀 Deployment link
 You can try the app instantly here: [bmi-calculator-phi-seven-98.vercel.app](https://bmi-calculator-phi-seven-98.vercel.app)
 
 ---
