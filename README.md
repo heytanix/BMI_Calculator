@@ -1,6 +1,6 @@
 # BMI Calculator - Stay Healthy
 
-A fully responsive web app to calculate Body Mass Index (BMI) using a modern Python Flask backend, with dynamic HTML, CSS, and JavaScript on the front end. Supports both metric and imperial units, provides categorized BMI results, and is built for seamless cross-device usage.
+A responsive web app to calculate Body Mass Index (BMI) using a modern Python Flask backend, with dynamic HTML, CSS, and JavaScript on the front end. Supports both metric and imperial units, provides categorized BMI results, and is built for seamless cross-device usage.
 
 ---
 
